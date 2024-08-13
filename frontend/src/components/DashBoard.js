@@ -38,5 +38,20 @@ function Dashboard() {
     return (
         <div className="dashboard">
             <h2>Admin Dashboard</h2>
-            <
-        
+            <FlashCardForm onAddFlashcard={handleAddFlashcard} />
+            <ul>
+                {flashcards.map(card => (
+                    <li key={card.id}>
+                        <div>
+                            <strong>Q:</strong> {card.question} <br />
+                            <strong>A:</strong> {card.answer}
+                        </div>
+                        <button onClick={() => handleDeleteFlashcard(card.id)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+export default Dashboard;
