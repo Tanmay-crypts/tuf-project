@@ -1,6 +1,6 @@
 import React from 'react';
 import FlashCardList from './components/FlashCardList';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/DashBoard';
 
 function App() {
     return (
